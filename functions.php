@@ -195,3 +195,31 @@ function ea_template_hierarchy( $template ) {
 	return $template;
 }
 add_filter( 'template_include', 'ea_template_hierarchy' );
+
+
+/** NOTIFICATION BAR ABOVE HEADER **/
+
+/* Register Notification Bar */
+function register_notification_bar() {
+  genesis_register_sidebar( array(
+    'id' => 'notification-bar',
+    'name' => 'Notification Bar',
+    'description' => 'This displays a notification bar above the site header.',
+  ) );
+}
+add_action ('genesis_setup', 'register_notification_bar', 20);
+
+/* Display Notification Bar */
+add_action( 'genesis_before_header', 'notification_bar' );
+function notification_bar() {
+
+  echo '<div class="notification-bar-section"><div class="wrap">';
+
+  genesis_widget_area( 'notification-bar', array(
+    'before' => '<div class="notification-bar">',
+    'after' => '</div>',
+  ) );
+
+  echo '</div></div>';
+
+}
