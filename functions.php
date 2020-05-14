@@ -217,13 +217,13 @@ add_action ('genesis_setup', 'register_notification_bar', 20);
 add_action( 'genesis_before_header', 'notification_bar' );
 function notification_bar() {
 
-  echo '<div class="notification-bar-section"><div class="wrap">';
+  echo '<div class="notification-bar-section">';
 
   genesis_widget_area( 'notification-bar', array(
     'before' => '<div class="notification-bar">',
     'after' => '</div>',
   ) );
 
-  echo '</div></div>';
+  echo '</div>';
 
 }
