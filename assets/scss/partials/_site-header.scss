@@ -3,7 +3,7 @@
 
 .site-header {
 	background: $white;
-	border-bottom: 1px solid $border-color;
+	border-bottom: 10px solid brand-color( 'blue' );
 	min-height: 49px;
 	position: relative;
 }
@@ -75,7 +75,27 @@
 --------------------------------------------- */
 .notification-bar-section {
 	background-color: brand-color( 'brown' );
+	height: 50px;
 	text-align: center;
+
+	.wrap {
+		height: 100%;
+	}
+
+	.notification-bar {
+		align-items: center;
+		color: $white;
+		display: flex;
+		font-family: $serif;
+		font-size: .8em;
+		height: 100%;
+		justify-content: center;
+		letter-spacing: 1px;
+	}
+
+	.textwidget p {
+		margin-bottom: 0;
+	}
 }
 
 
